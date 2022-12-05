@@ -1,0 +1,238 @@
+@font-face {
+    src: url("./fonts/orangejuice.ttf");
+    font-family: Orange Juice
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Orange Juice', cursive;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+main {
+    min-height: 100vh;
+    background: #7B39F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-container {
+    min-height: 100vh;
+    text-align: center;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .7em;
+}
+.start-container > h1 {
+    background: white;
+    padding: 0.15em 0.4em;
+    border-radius: 5px;
+    margin: 0;
+}
+.start-container > button {
+    margin: 0 auto;
+    padding: .5em 1.5em;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: orange;
+}
+.start-container > button:hover,
+.start-container > button:focus {
+    background: pink;
+}
+/* settings component css */
+
+.categories-container {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
+    background: white;
+    border-radius: 15px;
+    padding: .5em;
+    margin: 3px; 
+    cursor: pointer;
+}
+.categories-container:active {
+    transform: scale(1.05)
+}
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+}
+.categories > h4 {
+    font-family: 'Karla', sans-serif;
+    font-family: 700;
+    margin: 0 6px 5px 0;
+}
+
+/* questions and answer page css */
+
+.quizz-container {
+    color:  white;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+}
+.question-container {
+    width: 90%;
+    overflow: hidden;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #DBDEF0;
+    
+}
+.options{
+    border-radius: 10px;
+    background: white;
+    color: black;
+    padding: .5em 1em;
+    display: flex;
+    margin: 5px;
+    cursor: pointer;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.options:active {
+    transform: scale(1.05)
+}
+
+/* quizz */
+.quizz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.checkQuizz {
+    margin: 1.5em auto;
+    padding: .5em 1.5em;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: pink;
+}
+.checkQuizz:hover,
+.checkQuizz:focus {
+    background: orange;
+}
+
+/* score  */
+.score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.score-container > p{
+    margin: 10px;   
+    font-family: 'Karla', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+.score-container > button {
+    margin-top: 0;
+}
+
+/* loading */
+.loading {
+    min-height: 100vh;
+    background: green;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    background: #7B39F0;
+}
+
+/* no data */
+.nodata {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    min-height: 100vh;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden
+}
+.nodata > h2,
+.nodata > h3,
+.nodata > p {
+    display: block;
+    margin: 0;
+}
+
+@media (min-width: 480px) {
+    .start-container {
+        width: 80%;
+    }
+    .start-container > h1 {
+        max-width: 600px;
+    }
+    .options {
+        flex: 40%;
+    }
+    .checkQuizz {
+        font-size: 1.3125rem;
+    }
+}
+@media (min-width: 680px) {
+    .start-container {
+        min-height: 70vh;
+        max-width: 600px;
+    }
+    .options {
+        padding: 0.5em 0.75em;
+        flex: 20%;
+    }
+    .checkQuizz {
+        font-size: 1.3125rem;
+    }
+}
+@media (min-width: 1024px) {
+    main {
+        padding: 2em;
+    }
+    .start-container {
+       min-height: 70vh; 
+    }
+    .options-container {
+        justify-content: flex-start;
+    }
+    .options {
+        padding: 1em 1.5em;
+        max-width: 600px;
+        margin-right: 1em;
+    }
+}
